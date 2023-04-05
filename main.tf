@@ -1,12 +1,15 @@
 
 resource "jenkins_folder" "foldersr" {
-  name = "infra"
+  count = length(var.folders)
+  name  = element(var.folders, count.index)
 }
 
 resource "jenkins_job" "example" {
-  name     = "roboshop"
-  folder   = jenkins_folder.foldersr.id
+  depends_on = [jenkins_folder.foldersr]
+  count      = length(var.jobs)
+  name       = lookup(element(var.jobs, count.index), "name", null)
+  folder     = lookup(element(var.jobs, count.index), "folder", null)
   template = templatefile("${path.module}/sn-job.xml", {
-    description = "An example job created from Terraform"
+    repo_url    = lookup(element(var.jobs, count.index), "repo_url", null)
   })
 }
