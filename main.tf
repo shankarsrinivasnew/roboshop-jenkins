@@ -5,7 +5,7 @@ resource "jenkins_folder" "foldersr" {
 
 resource "jenkins_job" "example" {
   name     = "roboshop"
-  folder   = jenkins_folder.foldersr.index
+  folder   = jenkins_folder.foldersr.id
   template = templatefile("${path.module}/sn-job.xml", {
     description = "An example job created from Terraform"
   })
