@@ -17,3 +17,10 @@ resource "jenkins_job" "example" {
   }
 }
 
+resource "aws_route53_record" "jenkinsr" {
+  zone_id = "Z0607165JC9NKEPWSMH2"
+  name    = "jenkins.sstech.store"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
+}
