@@ -12,9 +12,9 @@ resource "jenkins_job" "example" {
   template = templatefile("${path.module}/sn-job.xml", {
     repo_url = lookup(element(var.jobs, count.index), "repo_url", null)
   })
-  lifecycle {
-    /* ignore_changes = [template] */
-  }
+  /* lifecycle {
+    ignore_changes = [template]
+  } */
 }
 
 resource "aws_route53_record" "jenkinsr" {
