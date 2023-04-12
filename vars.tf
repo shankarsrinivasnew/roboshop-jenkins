@@ -29,7 +29,7 @@ variable "m-jobs" {
     { name = "user", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/user" },
     { name = "payment", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/payment" },
     { name = "shipping", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/shipping" },
-    { name = "dispatch", folder = "CI-pipelin-multi", repo_url = "https://github.com/shankarsrinivasnew/dispatch" },
+    { name = "dispatch", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/dispatch" },
     { name = "frontend", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/frontend" }
 
   ]
