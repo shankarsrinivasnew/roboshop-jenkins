@@ -42,9 +42,9 @@ resource "jenkins_job" "m-jobr" {
     repo_url = lookup(element(var.m-jobs, count.index), "repo_url", null)
     name     = lookup(element(var.m-jobs, count.index), "name", null)
   })
-  lifecycle {
+  /* lifecycle {
     ignore_changes = [template]
-  }
+  } */
 }
 
 // Jenkins R53 Record

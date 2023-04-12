@@ -47,6 +47,10 @@
           <properties class="empty-list"/>
         </strategy>
         <buildStrategies>
+          <jenkins.branch.buildstrategies.basic.ChangeRequestBuildStrategyImpl plugin="basic-branch-build-strategies@71.vc1421f89888e">
+            <ignoreTargetOnlyChanges>false</ignoreTargetOnlyChanges>
+            <ignoreUntrustedChanges>false</ignoreUntrustedChanges>
+          </jenkins.branch.buildstrategies.basic.ChangeRequestBuildStrategyImpl>
           <jenkins.branch.buildstrategies.basic.BranchBuildStrategyImpl plugin="basic-branch-build-strategies@71.vc1421f89888e"/>
           <jenkins.branch.buildstrategies.basic.TagBuildStrategyImpl plugin="basic-branch-build-strategies@71.vc1421f89888e">
             <atLeastMillis>-1</atLeastMillis>
