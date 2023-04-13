@@ -42,12 +42,12 @@ resource "jenkins_job" "m-jobr" {
     repo_url = lookup(element(var.m-jobs, count.index), "repo_url", null)
     name     = lookup(element(var.m-jobs, count.index), "name", null)
   })
-  /* lifecycle {
+  lifecycle {
     ignore_changes = [template]
-  } */
+  }
 }
 
-// Jenkins R53 Record
+// Jenkins R53 Record for jenkins
 
 resource "aws_route53_record" "jenkinsr" {
   zone_id = "Z0607165JC9NKEPWSMH2"
@@ -55,4 +55,23 @@ resource "aws_route53_record" "jenkinsr" {
   type    = "A"
   ttl     = 30
   records = [data.aws_instance.jenkins.public_ip]
+}
+
+// Jenkins R53 Record for sonarcube on port 9000
+resource "aws_route53_record" "sonarcuber" {
+  zone_id = "Z0607165JC9NKEPWSMH2"
+  name    = "sonarcube.sstech.store"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.sonarcube.public_ip]
+}
+
+// Jenkins R53 Record for nexus on port 8081
+
+resource "aws_route53_record" "nexusr" {
+  zone_id = "Z0607165JC9NKEPWSMH2"
+  name    = "nexus.sstech.store"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.nexus.public_ip]
 }
