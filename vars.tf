@@ -1,18 +1,18 @@
 variable "s-folders" {
-  default = ["infra", "CI-pipeline"]
+  default = ["Infra"]
 }
 
 variable "s-jobs" {
   default = [
-    { name = "roboshop", folder = "infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-infra" },
-    { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/cart" },
+    { name = "Roboshop", folder = "Infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-infra",filename = "Jenkinsfile" },
+    { name = "App-deployment", folder = "Infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-ansible", filename = "Jenkinsfile-deployment" },
+    /* { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/cart" },
     { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/catalogue" },
     { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/user" },
     { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/payment" },
     { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/shipping" },
     { name = "dispatch", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/dispatch" },
-    { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/frontend" }
-
+    { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/frontend" } */
   ]
 
 }
