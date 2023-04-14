@@ -19,9 +19,9 @@ resource "jenkins_job" "s-jobr" {
     name     = lookup(element(var.s-jobs, count.index), "name", null)
     filename = lookup(element(var.s-jobs, count.index), "filename", null)
   })
-  lifecycle {
+  /* lifecycle {
     ignore_changes = [template]
-  }
+  } */
 }
 
 // Multi branch pipelines
