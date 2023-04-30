@@ -31,7 +31,7 @@ variable "m-jobs" {
     { name = "shipping", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/shipping" },
     { name = "dispatch", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/dispatch" },
     { name = "frontend", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/frontend" },
-    { name = "aws-smm-param-store", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/aws-ssm-param-store.git" }
+    { name = "aws-ssm-param-store", folder = "CI-pipeline-multi", repo_url = "https://github.com/shankarsrinivasnew/aws-ssm-param-store.git" }
 
   ]
 
