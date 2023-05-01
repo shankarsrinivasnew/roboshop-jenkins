@@ -6,6 +6,7 @@ variable "s-jobs" {
   default = [
     { name = "Roboshop", folder = "Infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-infra",filename = "Jenkinsfile" },
     { name = "App-deployment", folder = "Infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-ansible", filename = "Jenkinsfile-deployment" },
+    { name = "helm-deployment", folder = "Infra", repo_url = "https://github.com/shankarsrinivasnew/roboshop-helm-chart.git", filename = "Jenkinsfile" },
     /* { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/cart" },
     { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/catalogue" },
     { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/shankarsrinivasnew/user" },
